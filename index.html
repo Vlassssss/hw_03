@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.css">    
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <div class="root">
+                <header class="header">
+                    <div class="header-container">
+                        <div class="container">
+                            <div class="header__inner">
+                                <a href="#" class="logo"><img src="img/11.png" alt=""></a>   
+                                <nav class="menu">
+                                    <ul class="menu__list">
+                                        <li class="menu__item"><a href="#" class="menu__link">Головна</a></li>
+                                        <li class="menu__item"><a href="#about" class="menu__link">Курси</a></li>
+                                        <li class="menu__item"><a href="#benefits" class="menu__link">Відгуки</a></li>
+                                        <li class="menu__item"><a href="#" class="menu__link">Ціни</a></li>
+                                        <li class="menu__item"><a href="#" class="menu__link">Контакти</a></li>
+                                    </ul>
+                                </nav>
+                                 <!-- Иконка бургерменю -->
+                                <div class="burger">
+                                    <span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <main class="main">
+                    <section class="top">
+                        <div class="top-container">
+                            <div class="container">
+                                <div class="top__inner">
+                                    <div class="top__info">
+                                        <h1 class="top__title">Оволодійте світом програмування за допомогою Python!</h1>
+                                     <p class="top__text">Інтерактивні курси з Python для початківців та досвідчених програмістів</p>
+                                    <div class="top__contacts">
+                                        <button class="contacts__link" onclick="togglePopup()">Контакти</button>
+                                    </div>
+                                    <div class="popup" id="popup">
+                                        <div class="popup__content">
+                                            <button class="close-btn" onclick="togglePopup()">×</button>
+                                            <h2 class="footer__title">Зв'яжіться з нами</h2>
+                                            <form action="registration" class="form__registration">
+                                 
+                                             <label for="name" class="form__text">Ім'я</label>
+                                             <input type="text" name="name" id="name" class="form__input">
+                                  
+                                             <label for="email" class="form__text">E-mail</label>
+                                             
+                                             <input type="email" name="email" id="email" class="form__input">
+                                  
+                                             <button type="submit" class="form__button">Відправити <img src="img/row.svg" alt="" class="button__row row"></button>
+                                            </form>
+                                            
+                                            
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="top__img"> 
+                                        <img src="img/photomode_16092023_123616.png" alt="" class="top__image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide" style="background-image: url(img/q.png);"></div>
+                              <div class="swiper-slide" style="background-image:url(img/unsplash.png);"></div>
+                              <div class="swiper-slide" style="background-image:url(img/q.png);"></div>
+                              <div class="swiper-slide" style="background-image:url(img/uns.png);"></div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                    </div>
+                    </div>
+                     <section class="about" id="about">
+                        <div class="about_container">
+                            <div class="container">
+                                <div class="about__inner">
+                                    <h2 class="about__title about__none">Про нас</h2>
+                                    <img src="img/2.png" alt="" class="about__image">
+                                    <div class="about__info"> 
+                                        <h2 class="about__title about__active">Про нас</h2>
+                                        <p class="about__text">
+                                            Ласкаво просимо на наш курс з вивчення мови програмування Python! 
+                                            Python - це потужна та універсальна мова, яка використовується в багатьох сферах, від веб-розробки до штучного інтелекту.
+                                        </p>
+                                        <div class="benefits__button">
+                                            <button class="benefits__link" data-target="info1">Детальніше <img src="img/row.svg" alt="" class="button__row"></button>
+                                        </div>
+                                        <div class="benefits__info" id="info1" style="display: none;">
+                                            <p class="about__text">
+                                                Ласкаво просимо на наш курс з вивчення мови програмування Python! 
+                                                Python - це потужна та універсальна мова, яка використовується в багатьох сферах, від веб-розробки до штучного інтелекту.
+                                            </p>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                     </section>
+                     <section class="benefits" id="benefits">
+                        <div class="benefits_container">
+                            <div class="container">
+                                <div class="benefits__inner">
+                                    <h2 class="benefits__title benefits__none">Переваги наших курсів</h2>
+                                    <img src="img/4.png" alt="" class="benefits__image image__none">
+                                    <div class="benefits__info">
+                                        <h2 class="benefits__title benefits__active">Переваги наших курсів</h2>
+                                        <ol class="benefits__list">
+                                            <li>1. Інтерактивні уроки</li>
+                                            <li>2. Досвідчені викладачі</li>
+                                            <li>3. Практичні завдання</li>
+                                            <li>4. Гнучкий розклад</li>
+                                        </ol>
+                                        <div class="benefits__button">
+                                            <button class="benefits__link" data-target="info2">Детальніше <img src="img/row.svg" alt="" class="button__row"></button>
+                                        </div>
+                                        <div class="benefits__info" id="info2" style="display: none;">
+                                            <ol class="benefits__list">
+                                                <li>1. Інтерактивні уроки</li>
+                                                <li>2. Досвідчені викладачі</li>
+                                                <li>3. Практичні завдання</li>
+                                                <li>4. Гнучкий розклад</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    <img src="img/4.png" alt="" class="benefits__image image__active">
+                                </div>
+                            </div>
+                        </div>
+                     </section>
+                    <section class="comments">
+                        <div class="comments_container">
+                            <div class="container">
+                                <h2 class="comments__title">Коментарі</h2>
+                                <div class="comments__inner">
+                                            <div class="comments__card">
+                                            <img src="img/5.png" alt="" class="comments__image">
+                                            <h3 class="comments__card-name">Андрій</h3>
+                                            <p class="comments__text">Дякую за чудовий курс! Тепер я впевнено пишу на Python і вирішую завдання на роботі.</p>
+                                            </div>
+                                            <div class="comments__card-center">
+                                            <img src="img/6.png" alt="" class="comments__image-center">
+                                            <h3 class="comments__card-name">Тетьяна</h3>
+                                            <p class="comments__text">
+                                                Я довго вагалася, чи варто вчити Python, але ці курси переконали мене, що це відмінна ідея. 
+                                                Зараз працюю над своїм проектом, і це неймовірно захоплююче.
+                                                Курси легко зрозумілі, навіть якщо ви не маєте досвіду у програмуванні!
+                                            </p>
+                                            </div>
+                                            <div class="comments__card">
+                                            <img src="img/7.png" alt="" class="comments__image">
+                                            <h3 class="comments__card-name">Олег</h3>
+                                            <p class="comments__text">Ці курси з Python допомогли мені відкрити для себе захопливий світ програмування!</p>
+                                            </div>
+                                </div>
+                            </div>
+                         </div>
+                    </section>
+                    <section class="price">
+                        <div class="price_container">
+                            <div class="container">
+                                <h2 class="price__title">Цінова інформація</h2>
+                                <div class="price__inner">
+                                        <div class="price__card">
+                                            <img src="img/8.png" alt="" class="price__image">
+                                            <h3 class="card_title">Безкоштовний курс</h3>
+                                            <p class="price__text">Ми пропонуємо безкоштовний вступний курс для тих, хто хоче спробувати себе в програмуванні на Python перед придбанням повного курсу.</p>
+                                        </div>
+                                        <div class="price__card">
+                                            <img src="img/9.png" alt="" class="price__image">
+                                            <h3 class="card_title">Основний курс Python</h3>
+                                            <ul class="price__text price__list">
+                                                <li class="price__item"> Вартість: [7 000 грн]</li>
+                                                <li class="price__item">Тривалість: [6 місяців]</li>
+                                                <li class="price__item"> Включає доступ до всіх уроків та завдань, можливість звертатися до викладачів та підтримки.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="price__card">
+                                            <img src="img/10.png" alt="" class="price__image">
+                                            <h3 class="card_title">Розширений курс Python</h3>
+                                            <ul class="price__text price__list"> 
+                                                <li class="price__item">Вартість: [15 000 грн]</li>
+                                                <li class="price__item">Тривалість: [1 рік]</li>
+                                                <li class="price__item">Включає всі матеріали основного курсу, плюс додатковий матеріал та індивідуальні консультації.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="price__card">
+                                           <img src="img/12.png" alt="" class="price__image">
+                                           <h3 class="card_title">Спеціальні акції</h3>
+                                        <p class="price__text">
+                                            Час від часу ми можемо запускати спеціальні акції або надавати знижки на наші курси. 
+                                            Слідкуйте за оновленнями нашого лендінгу або підпишіться на нашу розсилку новин.
+                                        </p>
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="container">
+                        <div class="footer__inner">
+                            <div class="footer__registration">
+                                <h2 class="footer__title">Зв'яжіться з нами</h2>
+                                <form action="registration" class="form__registration">
+                     
+                                 <label for="name" class="form__text">Ім'я</label>
+                                 <input type="text" name="name" id="name" class="form__input">
+                      
+                                 <label for="email" class="form__text">E-mail</label>
+                                 
+                                 <input type="email" name="email" id="email" class="form__input">
+                      
+                                 <button type="submit" class="form__button">Відправити <img src="img/row.svg" alt="" class="button__row row"></button>
+                                </form>
+                             </div>
+                         <div class="contacts">
+                             <h2 class="footer__title">Контакти</h2>
+                              <div class="footer__image">
+                                <a href=""><img src="img/instagram.png" alt="" width="40"></a>
+                                <a href=""><img src="img/15.png" alt="" width="40"></a>
+                                <a href=""><img src="img/16.png" alt="" width="40"></a>
+                                <a href=""><img src="img/17.png" alt="" width="40"></a>
+                            </div>
+                              
+                              <p class="footer__text">
+                                 Наш номер телефону: <br> <br>
+                                 +380 444 555 107
+                              </p>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js">
+    </script>
+
+    <script src="js/main.js">
+    </script>
+</body>
+</html>

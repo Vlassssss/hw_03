@@ -1,0 +1,992 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+/*  Видалив nav,footer{display:block}   */
+
+html,body{
+	/*  Видалив height,width:100%;   */
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer; background-color: #fff;;}
+button::-moz-focus-inner {padding:0;border:0;}
+a{color:black}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+
+@media only screen and (max-width: 1130px) {
+    /* Общие стили */
+    .container {
+        padding: 0 20px; /* Уменьшаем отступы по бокам для более компактного отображения */
+    }
+
+    /* Стили для header */
+    .header__inner {
+        padding: 20px 0; /* Уменьшаем вертикальный отступ внутри header */
+    }
+
+	div.swiper-slide{
+		height:1000px ;
+	}
+	
+    ul.menu__list {
+        padding-right: 20px;
+		gap: 0 20px; /* Уменьшаем расстояние между пунктами меню */
+    }
+
+    /* Стили для секций */
+    div.top__inner {
+        flex-direction: column; /* Изменяем направление флексбокса на вертикальное */
+        gap: 40px; /* Добавляем отступ между элементами */
+        align-items: center; /* Выравниваем элементы по центру */
+		margin-bottom: 160px;
+		padding-bottom: 160px;
+    }
+
+	div.about__inner {
+		flex-direction: column; /* Изменяем направление флексбокса на вертикальное */
+        gap: 20px; /* Добавляем отступ между элементами */
+        align-items: center; /* Выравниваем элементы по центру */
+	}
+    div.benefits__inner {
+		flex-direction: column; /* Изменяем направление флексбокса на вертикальное */
+        gap: 40px; /* Добавляем отступ между элементами */
+        align-items: center; /* Выравниваем элементы по центру */
+	}
+    div.comments__inner {
+		flex-direction: column; /* Изменяем направление флексбокса на вертикальное */
+        gap: 25px; /* Добавляем отступ между элементами */
+        align-items: center; /* Выравниваем элементы по центру */
+		text-align: center;
+	}
+    div.price__inner {
+		flex-direction: column; /* Изменяем направление флексбокса на вертикальное */
+        gap: 40px; /* Добавляем отступ между элементами */
+        align-items: center; /* Выравниваем элементы по центру */
+		display: grid;
+		grid-column-gap: 40px;
+		grid-template-columns: auto auto;
+
+	}
+    div.footer__inner {
+		flex-direction: column; /* Изменяем направление флексбокса на вертикальное */
+        gap: 40px; /* Добавляем отступ между элементами */
+        align-items: center; /* Выравниваем элементы по центру */
+	}
+
+
+
+    /* Изменяем ширину изображений, чтобы они лучше помещались на экране планшета */
+    img.top__image {
+        width: 100%; /* Изображения занимают всю доступную ширину */
+        max-width: 400px; /* Максимальная ширина изображений */
+    }
+
+	img.about__image {
+		 /* Изображения занимают всю доступную ширину */
+        max-width: 600px; /* Максимальная ширина изображений */
+	}
+
+    img.benefits__image {
+		 /* Изображения занимают всю доступную ширину */
+        max-width: 600px; /* Максимальная ширина изображений */
+	}
+
+    img.comments__image{
+		width: 100%; /* Изображения занимают всю доступную ширину */
+        max-width: 400px; /* Максимальная ширина изображений */
+	}
+
+	img.comments__image-center{
+		width: 100%; /* Изображения занимают всю доступную ширину */
+        max-width: 400px; /* Максимальная ширина изображений */
+	}
+    
+
+    img.price__image{
+		width: 100%; /* Изображения занимают всю доступную ширину */
+        max-width: 400px; /* Максимальная ширина изображений */
+	}
+
+
+    /* Стили для текста */
+    div.top__info {
+        text-align: center; /* Выравниваем текст по центру */
+        max-width: 100%; /* Ширина текстовых блоков равна ширине родительского контейнера */
+    }
+
+
+    div.about__info {
+		text-align: center; /* Выравниваем текст по центру */
+        max-width: 100%; /* Ширина текстовых блоков равна ширине родительского контейнера */
+	}
+
+    div.benefits__info {
+		text-align: center; /* Выравниваем текст по центру */
+        max-width: 100%; /* Ширина текстовых блоков равна ширине родительского контейнера */
+	}
+
+    div.comments__card{
+		text-align: center; /* Выравниваем текст по центру */
+        max-width: 100%; /* Ширина текстовых блоков равна ширине родительского контейнера */
+		height: 100%;
+		
+	}
+
+    div.comments__card-center{
+		text-align: center; /* Выравниваем текст по центру */
+        max-width: 100%; /* Ширина текстовых блоков равна ширине родительского контейнера */
+		height: 100%;
+	}
+
+    div.price__card{
+		text-align: center; /* Выравниваем текст по центру */
+        max-width: 100%; /* Ширина текстовых блоков равна ширине родительского контейнера */
+		height: 100%;
+	}
+
+
+    p.top__text {
+        width: 100%; /* Текст занимает всю доступную ширину */
+    }
+
+	
+    p.comments__text{
+		text-align: center;
+		width: 100%; /* Текст занимает всю доступную ширину */
+	}
+
+    p.price__text {
+		width: 100%; /* Текст занимает всю доступную ширину */
+	}
+
+    p.footer__text {
+		width: 100%; /* Текст занимает всю доступную ширину */
+	}
+
+
+
+
+    /* Стили для кнопок */
+    a.contacts__link {
+        width: 100%; /* Кнопки занимают всю доступную ширину */
+        max-width: 300px; /* Максимальная ширина кнопок */
+    }
+
+	a.about__link {
+		width: 100%; /* Кнопки занимают всю доступную ширину */
+        max-width: 300px; /* Максимальная ширина кнопок */
+	}
+
+    a.benefits__link {
+		width: 100%; /* Кнопки занимают всю доступную ширину */
+        max-width: 300px; /* Максимальная ширина кнопок */
+	}
+
+    .form__button {
+		width: 100%; /* Кнопки занимают всю доступную ширину */
+        max-width: 300px; /* Максимальная ширина кнопок */
+	} 
+
+	img.image__none{
+		display: block;
+	}
+
+	img.image__active{
+		display: none;
+	}
+
+	h2.about__none{
+		display: block;
+		padding: 0px;
+	}
+
+	h2.about__active{
+		display: none;
+	}
+
+	h2.benefits__none{
+		display: block;
+		padding: 0px;
+	}
+
+	h2.benefits__active{
+		display: none;
+	}
+
+	h2.comments__title{
+		font-size: 38px;
+		padding-bottom: 35px;
+	}
+
+	h1.price__title{
+		padding-bottom: 20px;
+	}
+
+	.popup{
+		text-align: left;
+	}
+}
+
+
+
+@media only screen and (max-width: 686px) {
+	/* Общие стили */
+    .container {
+        padding: 0 10px; /* Уменьшаем отступы по бокам для более компактного отображения */
+    }
+
+    /* Стили для header */
+    .header__inner {
+        padding: 10px 0; /* Уменьшаем вертикальный отступ внутри header */
+    }
+
+    .menu__list {
+        flex-direction: column; /* Располагаем пункты меню вертикально */
+        gap: 10px; /* Уменьшаем расстояние между пунктами меню */
+    }
+
+    /* Стили для секций */
+    .top__inner{
+        gap: 20px; /* Уменьшаем отступ между элементами */
+    }
+
+	div.swiper-slide{
+		height:1100px ;
+	}
+    /* Изменяем ширину изображений для лучшего отображения на мобильных устройствах */
+   
+    img.price__image {
+        width: 100%; /* Изображения занимают всю доступную ширину */
+        max-width: 55%; /* Максимальная ширина изображений */
+    }
+
+	.top__img{
+		text-align: center;
+		justify-content: center;
+	}
+	img.top__image{
+		width: 100%; /* Изображения занимают всю доступную ширину */
+        max-width: 65%; /* Максимальная ширина изображений */
+		text-align: center;
+		justify-content: center;
+	}
+
+	img.about__image {
+		width: 100%; /* Изображения занимают всю доступную ширину */
+        max-width: 450px; /* Максимальная ширина изображений */
+		height: 100%;
+		max-height: 450px;
+	}
+
+    img.benefits__image {
+		width: 100%; /* Изображения занимают всю доступную ширину */
+        max-width: 450px; /* Максимальная ширина изображений */
+		height: 100%;
+		max-height: 450px;
+	}
+    
+	
+
+    /* Стили для текста */
+    .top__info,
+    .about__info,
+    .benefits__info,
+    .comments__card,
+    .comments__card-center{
+        padding: 20px; /* Увеличиваем отступ вокруг текстовых блоков */
+    }
+
+
+	.price__card{
+		max-width: 230px;
+	}
+
+	p.price__text, li.price__item{
+		font-weight: 400;
+		font-size: 17px;
+		line-height: 120%;	
+		text-align: center;
+		list-style-type: none;
+	}
+
+	
+    /* Стили для кнопок */
+    .contacts__link,
+    .about__link,
+    .form__button {
+        width: 100%; /* Кнопки занимают всю доступную ширину */
+        max-width: 100%; /* Максимальная ширина кнопок */
+    }
+
+	button.benefits__link{
+		 /* Кнопки занимают всю доступную ширину */
+        max-width: 100%; /* Максимальная ширина кнопок */
+	}
+
+
+	div.price__inner {
+		flex-direction: column; /* Изменяем направление флексбокса на вертикальное */
+        gap: 25px; /* Добавляем отступ между элементами */
+        align-items: center; /* Выравниваем элементы по центру */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+
+	p.about__text{
+		max-width: 100%;
+		font-size: 20px;
+	}
+
+	input.form__input{
+		height: 53px;
+		width: 370px;
+	}
+
+	div.benefits__inner {
+		flex-direction: column; /* Изменяем направление флексбокса на вертикальное */
+        gap: 30px; /* Добавляем отступ между элементами */
+        align-items: center; /* Выравниваем элементы по центру */
+	}
+
+	div.benefits__info{
+		padding:0px;
+	}
+
+
+	ol.benefits__list {
+		font-size: 20px;
+	}
+
+
+	h2.about__none{
+		font-size: 38px;
+	}
+
+	h2.benefits__none{
+		font-size: 38px;
+	}
+
+	h2.comments__title{
+		font-size: 38px;
+	}
+
+	h2.price__title{
+		font-size: 38px;
+		padding-bottom: 20px;
+	}
+
+
+
+	div.burger { 
+		display: flex; 
+		cursor: pointer;
+	}
+
+	.menu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 50;
+        overflow-y: auto;
+        padding: 100px 40px;
+        background-color: black;
+        animation: burgerAnimation 0.5s;
+    }
+
+
+	.menu ul{
+		flex-direction: column;
+        row-gap: 30px;
+		
+    }
+
+	
+}
+    
+    
+@media (max-width: 533px){
+	h2.benefits__none{
+		text-align: center;
+	}
+
+	div.swiper-slide{
+		height:1000px ;
+	}
+}
+@media (max-width: 440px){
+
+	div.swiper-slide{
+		height:1000px ;
+	}
+
+	h2.about__none{
+		font-size: 28px;
+	}
+
+	h2.benefits__none{
+		font-size: 28px;
+	}
+	
+	h2.comments__title{
+		font-size: 28px;
+	}
+
+	h2.price__title{
+		font-size: 28px;
+		padding-bottom: 20px;
+	}
+
+	h2.footer__title{
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 75%;
+		text-align: center;
+		margin-bottom:82px;
+	}
+
+	label.form__text{
+		font-size: 20px;
+	}
+
+	p.footer__text{
+		font-size: 20px;
+		text-align: center;
+	}
+
+
+	
+}
+
+
+
+@media (max-width: 430px) {
+	input.form__input{
+		width: 300px;
+		height: 53px;
+	}
+	h1.top__title {
+		font-size: 30px;
+	}
+
+	div.swiper-slide{
+		height:900px ;
+	}
+	
+
+
+}
+
+@media (max-width: 340px) {
+	div.swiper-slide{
+		height:800px ;
+	}
+}
+
+
+
+
+
+.root{
+	font-weight: 400;
+}
+
+.container{
+    max-width: 1140px;
+    padding: 0px 10px 0px 10px;
+    margin: 0 auto;
+}
+
+.header{
+	z-index: 5;
+	left: 0;
+	right: 0;
+}
+
+.header-container{
+    background-color: #0B1040;
+}
+
+.header__inner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 0px;
+}
+
+.menu__list{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0 35px;
+    font-weight: 600;
+    font-size: 18px;
+	padding-right: 20px;
+}
+
+
+
+.menu__link{
+    text-decoration: none;
+    color:white;
+}
+
+
+
+
+ /* Бургер меню*/
+.burger{
+	display: none;
+    position: relative;
+    z-index: 50;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30px;
+    height: 18px;
+	margin-right: 20px;
+}
+
+.burger span{
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: #FAF6F2;
+}
+
+.burger::before, .burger::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #FAF6F2;
+    transition: all 0.3s ease 0s;
+}
+
+.burger::before { top: 0 }
+
+.burger::after { bottom: 0 }
+
+/* Добавляем класс active для анимации иконки бургера */
+.burger.active span { transform: scale(0) }
+
+.burger.active::before{
+    top: 50%;
+    transform: rotate(-45deg) translate(0, -50%);
+}
+
+.burger.active::after{
+    bottom: 50%;
+    transform: rotate(45deg) translate(0, 50%);
+}
+
+
+
+
+.top-container{
+	position: absolute;
+	z-index: 5;
+	left: 0;
+	right: 0;
+	padding-top: 100px;
+}
+
+/*.top-container{
+	background-image: url('../img/q.png');
+	background-repeat: no-repeat;
+	background-position:bottom center;
+	background-size:cover;
+}
+*/
+
+.swiper-slide{
+	height: 796px;
+	background-position:bottom center;
+	background-size:cover;
+	background-repeat: no-repeat;
+}
+
+.top__inner{
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:44px 0px 91px;
+
+
+}
+
+.top__info{
+	max-width:470px;
+}
+
+.top__title{
+	color:white;
+	font-size: 48px;
+	font-weight: 600;
+	margin-bottom: 60px;
+}
+
+.top__text{
+	color:white;
+	font-size: 20px;
+	margin-bottom: 44px;
+}
+
+.top__image{
+	max-width: 570px;
+}
+
+.contacts__link{
+	border: 1px solid #000;
+border-radius: 25px;
+padding: 17px 68px;
+width: 227px;
+height: 58px;
+background-color: white;
+font-size: 20px;
+}
+
+
+.about__container{
+	margin-top:100px;
+}
+
+.about__inner{
+	display: flex;
+    justify-content: center;
+	gap: 0 90px;
+	margin-bottom: 100px;
+	margin-top:100px;
+}
+
+
+
+.about__image{
+	width: 472px;
+	height: 472px;
+}
+
+.about__title{
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 90%;
+	padding-bottom: 44px;
+}
+
+.about__none{
+	display: none;
+}
+
+
+.about__text{
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 150%;
+	width: 570px;
+	padding-bottom: 62px;
+}
+
+.about__link{
+	border: 1px solid #000;
+	border-radius: 25px;
+	padding: 17px 30px;
+	width: 212px;
+	height: 58px;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 120%;
+	margin-bottom: 25px;
+}
+
+.button__row{
+	padding-left: 10px;
+}
+
+.benefits__inner{
+	display: flex;
+    justify-content: center;
+	gap: 0 90px;
+	margin-bottom: 100px;
+}
+
+.benefits__title{
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 90%;
+	padding-bottom: 55px;
+}
+
+.benefits__none{
+	display: none;
+}
+
+.benefits__list{
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 179%;
+	padding-bottom:62px;
+}
+
+.benefits__link{
+	border: 1px solid #000;
+	border-radius: 25px;
+	padding: 17px 30px;	
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 120%;
+	margin-bottom: 25px;
+}
+
+.benefits__image{
+	width: 472px;
+	height: 472px;
+}
+
+.image__none{
+	display: none;
+}
+
+.benefits__list{
+	list-style-type: none;
+}
+
+.comments__title{
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 50%;
+	text-align: center;
+	padding-bottom: 60px;
+}
+
+.comments__inner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0 20px;
+	margin-bottom: 100px;
+}
+
+.comments__card{
+	border-radius: 50px;
+	width: 275px;
+	height: 350px;
+	background-color: #303030;
+	color:white;
+	text-align: center;
+	padding:44px;
+}
+
+.comments__image{
+	width: 79px;
+	margin-bottom: 25px;
+}
+
+.comments__card-center{
+	border-radius: 50px;
+	width: 374px;
+	height: 456px;
+	background-color: #303030;
+	color:white;
+	text-align: center;
+	padding:44px;
+}
+
+.comments__image-center{
+	width: 107px;
+	margin-bottom: 25px;
+}
+
+.comments__card-name{
+	padding-bottom: 25px;
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.comments__text{
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 120%;
+    text-align: left;
+}
+
+
+.price__title{
+	font-weight: 600;
+	font-size: 48px;
+	text-align: center;
+	padding-bottom: 60px;
+}
+
+.price__inner{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0 17px;
+	margin-bottom: 100px;
+}
+
+.price__card{
+	border-radius: 50px;
+	width: 275px;
+	height: 477px;
+	background: #303030;
+	color:white;
+	padding:44px;
+	text-align: center;
+}
+
+.card_title{
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 120%;
+	padding-bottom: 20px;	
+}
+
+.price__image{
+	padding-bottom: 20px;
+	width: 129px;
+}
+
+.price__text{
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 120%;	
+	text-align: left;
+}
+
+.price__item{
+	list-style-type: disc;
+}
+
+.price__list{
+	text-align: left;
+}
+
+.footer-container{
+	background-image: url('../img/13.png');
+	background-repeat: no-repeat;
+	background-position:bottom center;
+	background-size:cover;
+}
+
+.footer__inner{
+	display: flex;
+	justify-content: center;
+	gap:0 250px;
+	padding:33px 0px 173px;
+	color:white;
+}
+
+.form__input{
+	display:block;
+	margin: 16px 0px 30px;
+	border: 1px solid #000;
+	border-radius: 25px;
+	width: 429px;
+	height: 53px;
+	font-size: 25px;
+    padding:10px;
+}
+
+.footer__title{
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 75%;
+	text-align: center;
+	margin-bottom:82px;
+}
+
+.form__text{
+	font-weight: 400;
+	font-size: 24px;
+}
+
+
+.form__button{
+	border: 1px solid #000;
+	border-radius: 25px;
+	padding: 17px 48px;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.row{
+	margin-top: 1px;
+}
+
+.footer__image{
+	display:flex;
+	gap:0 38px;
+	margin-bottom: 61px;
+}
+
+.footer__text{
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 100%;
+}
+
+.open{
+    display: flex !important;
+}
+
+@keyframes burgerAnimation {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #A4C5E7;
+    border: 1px solid black;
+    padding: 20px;
+    z-index: 9999;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	border-radius: 20px;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.contacts__link {
+    cursor: pointer;
+}
